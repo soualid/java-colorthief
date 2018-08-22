@@ -16,8 +16,7 @@ import org.soualid.colorthief.MMCQ.DenormalizedVBox;
 public class MMCQTest extends TestCase {
 
 	public void testMMCQ() throws IOException {
-//		BufferedImage img = ImageIO.read(MMCQTest.class.getResourceAsStream("/photo3.JPG"));
-		BufferedImage img = ImageIO.read(new File("/Users/soualid/git/wipplay/wipplay-web-front/src/main/webapp/static/user-content/1/511-newvis.jpg"));
+		BufferedImage img = ImageIO.read(MMCQTest.class.getResourceAsStream("/photo3.JPG"));
 		CMap result = MMCQ.computeMap(img, 10);
 		Iterator<DenormalizedVBox> boxes = result.getBoxes().iterator();
 		while (boxes.hasNext()) {
